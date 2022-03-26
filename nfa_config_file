@@ -1,0 +1,35 @@
+#
+# comment l i n e s ( s k i p them )
+#
+Sigma:
+a
+b
+c
+End
+#
+# comment l i n e s ( s k i p them )
+#
+States:
+0, S
+1
+2
+3
+4
+5, F
+End
+#
+# comment l i n e s ( s k i p them )
+#
+Transitions:
+0, a, 1
+0, b, 2
+0, c, 3
+1, b, 2
+1, c, 4
+2, a, 3
+2, b, 4
+5, a, 4
+4, a, 5
+4, b, 5
+4, c, 5
+End
