@@ -32,4 +32,6 @@ Transitions:
 4, a, 5
 4, b, 5
 4, c, 5
+4, a, 3
+0, b, 1
 End
