@@ -62,7 +62,7 @@ def Run(input_file):
     DFATransitionTable[str(Starting_States[0])] = {}
     ConversionDict[str(Starting_States[0])] = Starting_States
     stack = Stack()
-    DeathState = '-1'
+    DeathState = '-1' # I chose that -1 is the notation for the death state
     for x in NFATransitionTable[Starting_States[0]].items():
         if len(x[1]) > 0:
             state = CreateState(x[1])
