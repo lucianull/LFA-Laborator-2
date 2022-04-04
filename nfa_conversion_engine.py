@@ -96,9 +96,8 @@ def Run(input_file):
                 else:
                     DFATransitionTable[top][state[0]] = DeathState
     DFATransitionTable[DeathState] = {}
-    DFATransitionTable[DeathState]['a'] = DeathState
-    DFATransitionTable[DeathState]['b'] = DeathState
-    DFATransitionTable[DeathState]['c'] = DeathState
+    for letter in Sigma:
+        DFATransitionTable[DeathState][letter] = DeathState
     ConversionDict['-1'] = [-1]
     PrintDFA(DFATransitionTable, Sigma, Starting_States[0], Final_States, ConversionDict)
 
