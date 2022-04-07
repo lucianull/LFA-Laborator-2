@@ -10,9 +10,10 @@ def WordAccept(Word, Starting_States, Final_States, NFA):
         while stack.size() > 0:
             top = stack.top()
             stack.pop()
-            for x in NFA[top].items():
-                if letter in x[1]:
-                    temp_stack.push(x[0])
+            if top in NFA:
+                for x in NFA[top].items():
+                    if letter in x[1]:
+                        temp_stack.push(x[0])
         stack = temp_stack
     while stack.size() > 0:
         if stack.top() in Final_States:
